@@ -2,8 +2,8 @@
 $transition: all 1s;
 
 $color-one: #0097e6;
-$color-two: #ff5252;
-$color-three: #33d9b2;
+$color-two: #f1f4f4;
+$color-three:#eed12b;
 $color-four: #fff;
 
 $text-color-one: #fff;
@@ -12,14 +12,11 @@ $text-color-three: #33d9b2;
 
 $font-main: 'Inconsolata', monospace;
 $font-header: 'Signika Negative', sans-serif;
+$font-special: 'Great Vibes', cursive;
 
 /* Global */
 *, *::before, *::after {
     box-sizing: border-box;
-}
-
-nav, .navbar {
-    border: 1px solid black;
 }
 
 body {
@@ -29,11 +26,27 @@ body {
     line-height: 1.7;
 }
 
-.fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+section {
+    padding: 45px 0;
+
+    .title {
+        margin: 0 0 25px 0;
+    }
+    h2 {
+        margin: 0 auto;
+        font-size: 48px;
+        line-height: 1;
+        }
+    h5 {
+        font-size: 14px;
+        margin: 0 auto;
+        line-height: 1;
+    }
+
+    .service-item > * {
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 .btn {
@@ -42,7 +55,7 @@ body {
     margin: 24px auto 0 auto;
     padding: 16px;
     border-radius: 5px;
-    font-family: $font-main;
+    font-family: $font-header;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
@@ -61,6 +74,10 @@ body {
 
 /* Navigation */
 .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 12px 0;
     font-size: 16px;
     ul {
@@ -86,15 +103,15 @@ body {
 }
 
 .nav-brand {
-    color: $text-color-three;
+    color: $color-three;
+    font-family: $font-special;
 }
 
+/* Header */
 .splash {
     background-image: url('https://i.postimg.cc/dQzmYpRg/pexels-th-era-photography-9031307-1.jpg');
     min-height: 500px;
     color: $text-color-one;
-    display: flex;
-    flex-shrink: 2;
 }
 
 .splash-inner {
@@ -104,6 +121,7 @@ body {
     .page-title {
         margin: 0 auto;
         font-size: 74px;
+        text-align: center;
         word-spacing: -24px;
         font-weight: 700;
         line-height: 1.2;
@@ -117,8 +135,8 @@ body {
 }
 
 .btn-one {
-    border-color: $color-four;
-    background-color: $color-one;
+    border: none !important;
+    background-color: $color-three;
     color: $text-color-one;
     background-image: linear-gradient(90deg, $color-four 50%, transparent 50%);
 }
