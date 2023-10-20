@@ -1,0 +1,124 @@
+/* Variables */
+$transition: all 1s;
+
+$color-one: #0097e6;
+$color-two: #ff5252;
+$color-three: #33d9b2;
+$color-four: #fff;
+
+$text-color-one: #fff;
+$text-color-two: #2c2c54;
+$text-color-three: #33d9b2;
+
+$font-main: 'Inconsolata', monospace;
+$font-header: 'Signika Negative', sans-serif;
+
+/* Global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+nav, .navbar {
+    border: 1px solid black;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: $font-main;
+    line-height: 1.7;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    font-family: $font-main;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    background-position: 100% 0;
+    background-size: 300%;
+    
+    &:hover {
+        background-position: 0 100%;
+        color: $color-one;
+        transition: $transition;
+    }
+}
+
+/* Navigation */
+.navigation {
+    padding: 12px 0;
+    font-size: 16px;
+    ul {
+        padding: 0 0;
+        margin: 0 0;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            margin-right: 36px;
+            position: relative;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color-one;
+        
+        &:hover {
+            color: $text-color-three;
+        }
+    }
+}
+
+.nav-brand {
+    color: $text-color-three;
+}
+
+.splash {
+    background-image: url('https://i.postimg.cc/dQzmYpRg/pexels-th-era-photography-9031307-1.jpg');
+    min-height: 500px;
+    color: $text-color-one;
+    display: flex;
+    flex-shrink: 2;
+}
+
+.splash-inner {
+    margin: auto;
+    max-width: 70%;
+
+    .page-title {
+        margin: 0 auto;
+        font-size: 74px;
+        word-spacing: -24px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .page-subtitle {
+        margin: 24px auto;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+.btn-one {
+    border-color: $color-four;
+    background-color: $color-one;
+    color: $text-color-one;
+    background-image: linear-gradient(90deg, $color-four 50%, transparent 50%);
+}
